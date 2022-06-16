@@ -17,8 +17,8 @@ jobs:
         ref: ${{ github.head_ref }}
     - name: Append random line
       run: |
-        chmod +x "${GITHUB_WORKSPACE}/.github/touch_it.sh"
-        "${GITHUB_WORKSPACE}/.github/touch_it.sh"
+        chmod +x "${GITHUB_WORKSPACE}/touch_it.sh"
+        "${GITHUB_WORKSPACE}/touch_it.sh"
       shell: bash
     - name: Auto commit changes 
       uses: stefanzweifel/git-auto-commit-action@v4
