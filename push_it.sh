@@ -1,2 +1,2 @@
 #!/bin/bash
-touch "./test.txt"
+echo "random $RANDOM" >> test.txt
