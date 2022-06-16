@@ -1,15 +1,26 @@
 name: Auto push files 
+
 on:
-  # Triggers the workflow every 5 minutes
   schedule:
-    - cron: "*/5 * * * *"
+    # Triggers the workflow every 5 minutes
+    - cron: '*/5 * * * *'
 jobs:
-  cron:
+  autopush:
+    name: Trigger auto push
     runs-on: ubuntu-latest
+
     steps:
     - uses: actions/checkout@v2
+      with:
+        ref: ${{ github.head_ref }}
+
     - name: Run script file
+    - uses: actions/checkout@master
       run: |
-         chmod +x ./push_it.sh
-         ./push_it.sh
+         chmod +x ./touch_it.sh
+         ./touch_it.sh
       shell: bash
+
+    - uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: Auto commit
