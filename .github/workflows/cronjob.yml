@@ -16,7 +16,6 @@ jobs:
         ref: ${{ github.head_ref }}
 
     - name: Append random line
-    - uses: actions/checkout@master
       run: |
          chmod +x ./touch_it.sh
          ./touch_it.sh
