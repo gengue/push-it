@@ -1,9 +1,10 @@
 name: Auto push files 
 
-on:
-  schedule:
-    # Triggers the workflow every 5 minutes
-    - cron: '*/5 * * * *'
+on: push
+#on:
+  #schedule:
+    ## Triggers the workflow every 5 minutes
+    #- cron: '*/5 * * * *'
 jobs:
   autopush:
     name: Trigger auto push
