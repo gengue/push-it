@@ -17,7 +17,7 @@ jobs:
     - name: Append random line
       run: |
         chmod +x "${GITHUB_WORKSPACE}/.github/touch_it.sh"
-        "${GITHUB_WORKSPACE}/.github/script.sh"
+        "${GITHUB_WORKSPACE}/.github/touch_it.sh"
       shell: bash
     - name: Auto commit changes 
       uses: stefanzweifel/git-auto-commit-action@v4
