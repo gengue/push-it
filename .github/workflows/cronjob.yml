@@ -11,17 +11,15 @@ jobs:
 
     steps:
     - name: Checkout 
-    - uses: actions/checkout@v2
+      uses: actions/checkout@v2
       with:
         ref: ${{ github.head_ref }}
-
     - name: Append random line
       run: |
          chmod +x ./touch_it.sh
          ./touch_it.sh
       shell: bash
-
     - name: Auto commit changes 
-    - uses: stefanzweifel/git-auto-commit-action@v4
+      uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: Auto commit
